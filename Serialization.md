@@ -13,7 +13,7 @@
 public void save() {
 		File f = new File("./temp.dat"); // 노드
 		try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(f))) {
-			out.writeObject(virus); // virus 객체에 Serializable이 구현되어 있어야한다 !!
+			out.writeObject(virus); // Virus 클래스에 Serializable이 구현되어 있어야한다 !!
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -25,4 +25,13 @@ public void save() {
 - Serializable 인터페이스를 구현해야한다.
 - 직렬화에서 제외하려는 멤버는 transient선언해준다. (ex. password)
 
+```java
+class Person implements Serializable { // 직렬화 필수 조건
+		private String name;
+		private int age;
+
+		private transient String ssn; // 직렬화 제외
+		private LoginInfo lInfo; // 직렬화 
+	}
+```
 
