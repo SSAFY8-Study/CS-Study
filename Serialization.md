@@ -9,7 +9,20 @@
 
 - ObjectOutputStream을 통한 writeObject 메서드 호출 시 해당 객체에 Serializable 인터페이스가 구현되어 있지 않으면, NotSerializableException이 발생된다.
 
+```java
+public void save() {
+		File f = new File("./temp.dat"); // 노드
+		try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(f))) {
+			out.writeObject(virus); // virus 객체에 Serializable이 구현되어 있어야한다 !!
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+```
+
 ## Serialization 조건
 
 - Serializable 인터페이스를 구현해야한다.
 - 직렬화에서 제외하려는 멤버는 transient선언해준다. (ex. password)
+
+
