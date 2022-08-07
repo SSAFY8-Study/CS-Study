@@ -46,7 +46,7 @@ public class Student {
 
 (String.class)
 
-![image](https://user-images.githubusercontent.com/44748142/183279014-e431e6bb-c327-48f6-96ac-b4f38ec8385f.png)
+![image](https://user-images.githubusercontent.com/44748142/183279174-edfff6d4-6a9b-4f41-a7fb-206c572b6d68.png)
 
 Comparable과 Comparator 의 사용법을 알아보기 전, 각 인터페이스를 확인해보자.
 
@@ -300,5 +300,7 @@ public class Sort {
 ```
 
 [Reference]
+
 https://st-lab.tistory.com/243
+
 https://velog.io/@injoon2019/%EC%9E%90%EB%B0%94-Comparator%EC%99%80-Comparable
