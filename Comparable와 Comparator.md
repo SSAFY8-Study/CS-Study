@@ -4,7 +4,7 @@
 
 (Arrays.asList()는 배열을 ArrayList로 바꿔 반환하는 메서드)
 
-```
+```java
 public static void main(String[] args) {
 	
 	int[] intArray = {5, 9, 3, 4, 8};
@@ -18,13 +18,13 @@ public static void main(String[] args) {
 }
 ```
 
-[##_Image|kage@XOtLD/btrI1Wn5Pm4/NK854qikbW4y1l7h8SJYr1/img.png|CDM|1.3|{"originWidth":354,"originHeight":52,"style":"alignCenter","filename":"1.png"}_##]
+![image](https://user-images.githubusercontent.com/44748142/183279002-16cfdb55-bced-4e25-b5d7-df55d9be1af2.png)
 
 위 코드를 보면 두 함수 모두 내림차순으로 정렬한 것을 볼 수 있다.
 
 이때 만약 strList를 알파벳 순이 아닌 문자열의 길이로 정렬하고 싶다거나 아래와 같이 Student 클래스를 객체로 생성해 정렬하고 싶다면 어떻게 해야할까? 이때 정렬 기준을 age로 할지 name 혹은 classNumber로 할지도 고민해야한다.
 
-```
+```java
 public class Student {
 	int age;
 	String name;
@@ -46,7 +46,7 @@ public class Student {
 
 (String.class)
 
-[##_Image|kage@cDiA2V/btrI7MjKEWH/dnayosKSL9gHfFb3EXZIuk/img.png|CDM|1.3|{"originWidth":867,"originHeight":206,"style":"alignCenter","filename":"2.png"}_##]
+![image](https://user-images.githubusercontent.com/44748142/183279014-e431e6bb-c327-48f6-96ac-b4f38ec8385f.png)
 
 Comparable과 Comparator 의 사용법을 알아보기 전, 각 인터페이스를 확인해보자.
 
@@ -70,7 +70,7 @@ Comparable과 Comparator 의 사용법을 알아보기 전, 각 인터페이스�
 
 위의 Student 클래스의 name의 알파벳 순으로 정렬하기 위해서 아래와 같이 코드를 작성하면 된다.
 
-```
+```java
 package sort;
 
 import java.util.Arrays;
@@ -115,7 +115,7 @@ public class Sort {
 
 아래와 같이 이름 순으로 정렬된 것을 확인할 수 있다.
 
-[##_Image|kage@d6ervv/btrI4Uo24ex/t7IyXLMvu0so9cNTY4eXF0/img.png|CDM|1.3|{"originWidth":1044,"originHeight":34,"style":"alignCenter","filename":"3.png"}_##]
+![image](https://user-images.githubusercontent.com/44748142/183279034-09d185de-d333-4670-b2b5-cd89b063d75f.png)
 
 Student클래스에서 compareTo()메서드를 재정의 시,
 
@@ -147,7 +147,7 @@ Comparable과 마찬가지로 음수 또는 0이 return되면 객체의 자리�
 
 Student 클래스에서 이름의 알파벳 순이 아닌 길이로 비교하여 정렬하고 싶다면 아래와 같이 정렬하면 된다.
 
-```
+```java
 class StringLengthComparator implements Comparator<Student>{
 
 	@Override
@@ -191,11 +191,11 @@ public class Sort {
 }
 ```
 
-[##_Image|kage@bgamI9/btrI3uqCWjF/KY7OjqKX3IZEg8fX7s5mGk/img.png|CDM|1.3|{"originWidth":1044,"originHeight":34,"style":"alignCenter","filename":"4.png"}_##]
+![image](https://user-images.githubusercontent.com/44748142/183279058-97b7a421-2818-484c-9f59-756f08bd9c2c.png)
 
 동일한 작동(code 간략하게 수정)
 
-```
+```java
 //class StringLengthComparator implements Comparator<Student>{
 //
 //	@Override
@@ -255,7 +255,7 @@ public class Sort {
 
 위 동작을 **inner class**로 구현.
 
-```
+```java
 class Student {
 	int age;
 	String name;
