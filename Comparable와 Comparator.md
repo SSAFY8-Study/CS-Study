@@ -18,7 +18,7 @@ public static void main(String[] args) {
 }
 ```
 
-![image](https://user-images.githubusercontent.com/44748142/183279002-16cfdb55-bced-4e25-b5d7-df55d9be1af2.png)
+![image](https://user-images.githubusercontent.com/44748142/183279201-3ad1a80b-4ad3-4aa9-afab-4405174ca2e5.png)
 
 위 코드를 보면 두 함수 모두 내림차순으로 정렬한 것을 볼 수 있다.
 
