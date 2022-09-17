@@ -14,62 +14,65 @@
 
 - 일반 선택자 우선 순위 : **전제 선택자<타입 선택자<클래스 선택자<ID 선택자**
 
-| 전체 선택자 | *{ } |
+| 선택자 | 사용법 |
 | --- | --- |
+| 전체 선택자 | *{ } |
 | 타입 선택자     | E1, E2 { } |
 |  클래스 선택자  | . class-name{ } |
 | ID 선택자    | #id-name{ } |
 
 **복합 선택자**
 
-| 하위 선택자  | E1 E2 { } |
+| 선택자 | 사용법 |
 | --- | --- |
+| 하위 선택자  | E1 E2 { } |
 | 자식선택자     | E1>E2 { } |
 | 인접 형제 선택자   |  E1+E2 { } |
 | 일반 형제 선택자 | E1~E2{ } |
 
 **그 외 선택자**
 
-| 가상 클래스 선택자 | : |
+| 선택자 | 사용법 |
 | --- | --- |
+| 가상 클래스 선택자 | : |
 | 가상 엘리먼트 선택자 | :: |
 | 속성 선택자 | [ ] |
 
 ### **일반 선택자 - 전체 선택자**
 
-- HTML 문서 내 모든 element에 적용
+- HTML 문서 내 모든 element에 적용 => ***{ }**
 - 우선 순위가 가장 낮음
 
-css
+**css**
 ```css
 * {
-		background: skyblue;
-		color: magenta;
-		font-weight: bold;
+	background: skyblue;
+	color: magenta;
+	font-weight: bold;
 	}
 ```
 
 ### 일반 선택자 - 타입 선택자
 
-- 태그명을 이용해서 스타일 적용
+- 태그명을 이용해서 스타일 적용 => **tag{ }**
 - 여러 element에 동일한 스타일 적용시, comma(,)로 구분
 
-css
+**css**
 ```css
 div, p {
-		padding: 10px;
-		margin: 10px;
-		font-weight: bold;
+	padding: 10px;
+	margin: 10px;
+	font-weight: bold;
 	}
 ```
 
 ### 일반 선택자 - 클래스 선택자
 
-- element의 클래스 이름을 사용하여 스타일 적용 ⇒ **.classname**
+- element의 클래스 이름을 사용하여 스타일 적용 ⇒ **.classname{ }**
 - 클래스 명은 공백없이 대소문자 또는 Hypen(-), UnderScore(_)로 시작하며, 기호나 숫자로 시작하지 않는다
 - element의 class 속성 값에 하나 이상의 클래스 이름 적용시, 공백으로 구분
 
-html
+**html**
 
 ```html
 <!--class 속성 값에 하나 이상의 클래스 이름 적용시, 공백으로 구분-->
@@ -78,7 +81,7 @@ html
 <p class="name1">p Class Selector</p>
 ```
 
-css
+**css**
 
 ```css
 .name1,.name3 { /*여러 클래스에 동일한 CSS적용시 콤마로 구분*/
@@ -93,19 +96,19 @@ div.name1 { /*div 중 클래스 명이 name1인 곳에 CSS적용 */
 
 ### 일반 선택자 - ID 선택자
 
-- element의 ID를 사용하여 스타일 적용  ⇒ **#ID**
+- element의 ID를 사용하여 스타일 적용  ⇒ **#id-name{ }**
 - HTML문서에서 **동일한 ID 사용 불가**(**Class명은 동일**해도 되지만, **ID는 유일**해야 함)
 - element의 **ID 속성 값에 1개의 ID만 사용 가능**
 - 일반 선택자 중 **우선순위가 가장 높음**
 
-html
+**html**
 
 ```html
 <div>div ID Selector</div>
 <p id="ID1">p ID Selector</p>
 ```
 
-css
+**css**
 
 ```css
 #ID1{
@@ -116,10 +119,10 @@ css
 
 ### 복합 선택자 - 하위 선택자&자식 선택자
 
-- **하위 선택자**는 **1단계 하위 요소와 2단계 이상 하위 요소**에 모두 적용  ⇒ **E1 E2**
-- **자식 선택자**는 **1단계 하위 요소에만** 적용  ⇒ **E1>E2**
+- **하위 선택자**는 **1단계 하위 요소와 2단계 이상 하위 요소**에 모두 적용  ⇒ **E1 E2{ }**
+- **자식 선택자**는 **1단계 하위 요소에만** 적용  ⇒ **E1>E2{ }**
 
-html
+**html**
 
 ```html
 <div>
@@ -139,7 +142,7 @@ html
 </div>
 ```
 
-css
+**css**
 
 ```css
 div div { /*style1 : div 자식 중 모든 div에 적용 */
@@ -162,11 +165,11 @@ div > p { /*style4 : div 자식 중 바로 다음 p에만 적용*/
 
 ### 복합 선택자 요소 - 인접 형제 선택자&일반 형제 선택자
 
-- 인접 형제 선택자는 형제 관계 중 인접하는 첫 번째 element만 적용  ⇒ **E1+E2**
-- 일반 형제 선택자는 형제 관계 중 인접하는 모든 element에 적용  ⇒ **E1~E2**
+- 인접 형제 선택자는 형제 관계 중 인접하는 첫 번째 element만 적용  ⇒ **E1+E2{ }**
+- 일반 형제 선택자는 형제 관계 중 인접하는 모든 element에 적용  ⇒ **E1~E2{ }**
 - 기준 element 중 아래 있는 element 만 생각하기
 
-html
+**html**
 
 ```html
 <div>div</div>
@@ -179,7 +182,7 @@ html
 <p>p style1 적용 가능, style2 적용 가능</p>
 ```
 
-css
+**css**
 
 ```css
 div + p { /*style1 : div의 형제 element 중 첫번째 element가 p일 경우 적용*/
@@ -208,7 +211,7 @@ div.class1~ p {/*style2:div의 형제 element 중 모든 p element에 적용*/
     - nth-child(odd) ⇒ 자식 중 홀수 적용
     - nth-child(even) ⇒ 자식 중 짝수 적용
     
-    html
+    **html**
     
     ```html
     <ul>
@@ -223,7 +226,7 @@ div.class1~ p {/*style2:div의 형제 element 중 모든 p element에 적용*/
     </ul>
     ```
     
-    css
+    **css**
     
     ```css
     li:nth-child(5) {
@@ -250,7 +253,7 @@ div.class1~ p {/*style2:div의 형제 element 중 모든 p element에 적용*/
 - :: 사용
 - ::after  ⇒ 요소 뒤에 content 추가
 
-css
+**css**
 ```css
 /*p태그의 마지막 요소 뒤에 추가*/
 p:last-child::after {
@@ -274,9 +277,9 @@ p:last-child::after {
 - [A$=V] ⇒ A 속성값이 V로 끝나는 element 적용
 - [A|=V] ⇒ A 속성값이 정확히 V이거나, V-로 시작하는 element 적용
 
-html
+**html**
 
-```css
+```html
 <div title="one">style1적용가능 </div>
 <div title="two">style1적용가능, style2적용가능</div>
 <p title="two">style1적용, style2적용가능, style3적용가능</p>
@@ -286,7 +289,7 @@ html
 <div class="one-two-three">style7적용가능</div>
 ```
 
-css
+**css**
 
 ```css
 [title] { /*style1*/
@@ -321,7 +324,7 @@ p[class$="wrap"] { /*style6*:p태그 중 wrap끝나는 element/
 
 - 같은 element에 두개 이상의 CSS 규칙이 적용된 경우, **마지만 규칙**, **구체적인 규칙**, **!important**가 우선 적용
 
-html
+**html**
 
 ```html
 <h1>CSS우선순위</h1>
@@ -330,7 +333,7 @@ html
 <p>style6적용</p>
 ```
 
-css
+**css**
 
 ```css
 i { /*style1*/
