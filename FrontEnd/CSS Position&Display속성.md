@@ -10,7 +10,7 @@
 - Element를 **렌더링하지 않도록 설정**
 - **visibility 속성을 hidden으로 설정한 것과 달리, 영역을 차지하지 않음**
 
-html
+**html**
 
 ```html
 <!DOCTYPE html>
@@ -21,16 +21,16 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style> 
-			div{
-				text-align: center;
-	      background-color: cadetblue;
-			}
+	div{
+	    text-align: center;
+	    background-color: cadetblue;
+	}
 	
-	    /* diplay속성의 none : 자리를 차지 안 함 */
-			.display-none{ display: none }
+	/* diplay속성의 none : 자리를 차지 안 함 */
+	.display-none{ display: none }
 	
-	    /* visibility속성의 hidden : 자리를 자치 */
-	    .invisible{ visibility: hidden }
+	/* visibility속성의 hidden : 자리를 자치 */
+	.invisible{ visibility: hidden }
     </style>
 </head>
 <body>
@@ -54,7 +54,7 @@ html
 - **width, height, margin, padding 속성 사용 가능**
 - span은 원래 줄바꿈 속성이 없지만 display속성을 block으로 설정하면서 줄바꿈과 width 설정이 가능해진 것을 볼 수 있음.
 
-html
+**html**
 
 ```html
 <!DOCTYPE html>
@@ -65,17 +65,16 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       
-		span{
+	span{
             margin: 10px;
-						text-align: center;
+	    text-align: center;
             background-color: cadetblue;
             display : block;
-		}
+	}
         
-		.span1{ width: 300px;}
+	.span1{ width: 300px;}
       
-    .span2{ width: 200px;}
+    	.span2{ width: 200px;}
     </style>
 </head>
 <body>
@@ -95,7 +94,7 @@ html
 - **margin과 padding 속성은 좌우만 반영**되고, **상하 간격은 반영되지 않음**
 - div는 block속성을 가지지만, display속성을 inline으로 설정하면서 줄 바꿈없이 연속으로 이어지면서 width 설정이 불가능해짐.
 
-html
+**html**
 
 ```html
 <!DOCTYPE html>
@@ -107,16 +106,16 @@ html
     <title>Document</title>
     <style>
        
-		div{
+	div{
             margin: 10px;
-						text-align: center;
+            text-align: center;
             background-color: cadetblue;
             display : inline;
-		}
+	}
         
-    /* width 속성 적용 불가 */
-		.div1{ width: 300px;}
-    .div2{ width: 200px;}
+        /* width 속성 적용 불가 */
+	.div1{ width: 300px;}
+        .div2{ width: 200px;}
     </style>
 </head>
 <body>
@@ -134,7 +133,7 @@ html
 - **줄 바꿈이 없고, 크기 지정 및 margin과 padding 속성의 상하 간격 지정 가능**
 - span은 크기 지정이 불가능하지만, display속성을 inline-block으로 설정하면서 width지정 가능해짐
 
-html
+**html**
 
 ```html
 <!DOCTYPE html>
@@ -144,18 +143,16 @@ html
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-       
-		span{
+    <style> 
+	span{
             margin: 10px;
-						text-align: center;
+            text-align: center;
             background-color: cadetblue;
             display : inline-block;
-		}
+	}
         
-		.span1{ width: 300px;}
-      
-    .span2{ width: 200px;}
+	.span1{ width: 300px;}
+        .span2{ width: 200px;}
     </style>
 </head>
 <body>
@@ -205,32 +202,32 @@ html
     <title>Document</title>
     <style>
         .box-container{
-			margin: 40px;          
+	    margin: 40px;          
             height: 1000px;
-			border: 2px solid black; 
-		}
-		.box-container div{
+	    border: 2px solid black; 
+	}
+	.box-container div{
             width: 200px;
-			text-align: center;
+	    text-align: center;
             background-color: cadetblue;
-		}
-    /* static이므로 top, left속성 적용 불가능 */
-		#box1 { position: static; top: 20px; left: 50px; }
+	}
+    	/* static이므로 top, left속성 적용 불가능 */
+	#box1 { position: static; top: 20px; left: 50px; }
 
-    /* relative이므로 흐름에 맞춰 위치해야하는 곳에서 top, left 속성값에 맞춰 배치*/
-		#box2 { position: relative; top: 20px; left: 50px; }
+   	/* relative이므로 흐름에 맞춰 위치해야하는 곳에서 top, left 속성값에 맞춰 배치*/
+	#box2 { position: relative; top: 20px; left: 50px; }
 
-    /* absolute이므로 부모 요소 중 relative 속성값을 가진 요소를 기준으로 배치. 이 경우 relative 속성값을 가진 부모 없으므로 전체 문서 기준 */
-		#box3 { position: absolute; top: 20px; right: 50px; }
+    	/* absolute이므로 부모 요소 중 relative 속성값을 가진 요소를 기준으로 배치. 이 경우 relative 속성값을 가진 부모 없으므로 전체 문서 기준 */
+	#box3 { position: absolute; top: 20px; right: 50px; }
 
-    /* fixed이므로 브러우저 창을 기준으로 고정 배치. 스크롤 작동시에도 고정 */
-		#box4 { position: fixed; bottom: 20px; right: 50px; }
+    	/* fixed이므로 브러우저 창을 기준으로 고정 배치. 스크롤 작동시에도 고정 */
+	#box4 { position: fixed; bottom: 20px; right: 50px; }
 
-    /* relative이므로 흐름에 맞춰 위치해야하는 곳에서 top, left 속성값에 맞춰 배치*/
-    #box5 { position: relative; top: 50px; left: 50px;}
+    	/* relative이므로 흐름에 맞춰 위치해야하는 곳에서 top, left 속성값에 맞춰 배치*/
+    	#box5 { position: relative; top: 50px; left: 50px;}
 
-    /* absolute이므로 부모 요소 중 relative 속성값을 가진 요소를 기준으로 배치. 이 경우 부모 요소의 box5가 relative 속성값을 가지므로 해당 요소 기준으로 배치 */
-    #box6 { position: absolute; top: 50px; left: 50px;}
+    	/* absolute이므로 부모 요소 중 relative 속성값을 가진 요소를 기준으로 배치. 이 경우 부모 요소의 box5가 relative 속성값을 가지므로 해당 요소 기준으로 배치 */
+    	#box6 { position: absolute; top: 50px; left: 50px;}
     </style>
 </head>
 <body>
