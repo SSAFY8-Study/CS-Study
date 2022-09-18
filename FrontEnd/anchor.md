@@ -13,9 +13,11 @@
     하이퍼링크를 클릭했을 때 이동할 문서의 URL이나 문서의 책갈피를 지정한다.
 -   **target**  
     하이퍼링크를 클릭했을 때 현재 윈도우 또는 새로운 윈도우에서 이동할지 지정한다. _(default는 \_self)_
+-   **title**  
+    하이퍼링크에 마우스 오버 시 설명을 출력한다.
 
 ``` html
-<a href="http://www.naver.com">네이버</a>
+<a href="http://www.naver.com" title="네이버로 이동">네이버</a>
 <a href="http://www.google.com" target="_self">구글</a>
 <a href="http://www.daum.com" target="_blank">다음</a>
 <!--target 속성은 이 외에도 _parent, _top도 존재, 하지만 잘 사용x-->
