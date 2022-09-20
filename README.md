@@ -31,8 +31,9 @@ CS 스터디 (22.08.07 ~)
 
 <h3>FrontEnd</h3>
 
-+ [Form tag와 event, Event Handler](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/form%20tag%EC%99%80%20event.md)
 + [Anchor](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/anchor.md)
++ [id와 name](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/id%EC%99%80%20name.md)
++ [Form tag와 event, Event Handler](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/form%20tag%EC%99%80%20event.md)
 + [Ajax 통신](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/ajax_fetch().md)
 + [JavaScript CSS 스타일 적용](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/JS%20Style.md)
 + [JavaScript Element](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/JS%20Element.md)
@@ -42,4 +43,4 @@ CS 스터디 (22.08.07 ~)
 + [CSS position & display](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/CSS%20Position%26Display%EC%86%8D%EC%84%B1.md)
 + [Local Storage](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/localStorage.md)
 + [GET vs POST](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/GET:POST.md)
-+ [CSV & XML & JSON)](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/CSV%2C%20XML%2C%20JSON.md)
++ [CSV & XML & JSON](https://github.com/SSAFY8-Study/CS-Study/blob/main/FrontEnd/CSV%2C%20XML%2C%20JSON.md)
