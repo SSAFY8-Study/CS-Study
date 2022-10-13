@@ -47,6 +47,8 @@ CS 스터디 (22.08.07 ~)
 
 <h3>BackEnd</h3>
 
++ 디자인 패턴
++ REST API
 + [Web Server & WAS](https://github.com/SSAFY8-Study/CS-Study/blob/main/BackEnd/Web%20Server%20%26%20WAS.md)
 + [브라우저 동작 방식](https://github.com/SSAFY8-Study/CS-Study/blob/main/BackEnd/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EB%8F%99%EC%9E%91%EB%B0%A9%EC%8B%9D.md)
 + [쿠키와 세션](https://github.com/SSAFY8-Study/CS-Study/blob/main/BackEnd/%EC%BF%A0%ED%82%A4%EC%99%80%20%EC%84%B8%EC%85%98.md)
