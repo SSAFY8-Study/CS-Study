@@ -91,3 +91,9 @@
 | Physical Layer |  | bit를 아날로그 신호로 변환 후 전송 |
 
 *MAC Address : MAC 프로토콜. 16진수의 총 6개의 조합으로 이루어진 주소
+
+[Reference]
+
+https://velog.io/@jeongs/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-OSI-7-%EA%B3%84%EC%B8%B5-%EA%B7%B8%EB%A6%BC%EA%B3%BC-%ED%95%A8%EA%BB%98-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
+
+https://lxxyeon.tistory.com/155
